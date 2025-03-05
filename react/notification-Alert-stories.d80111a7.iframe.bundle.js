@@ -14,7 +14,7 @@
   color: var(--colors-success-base);
   display: flex;
   flex-wrap: wrap;
-`,CommentBlock=({children})=>react.createElement(CommentContainer,null,children);CommentBlock.__docgenInfo={description:"",methods:[],displayName:"CommentBlock",props:{children:{required:!0,tsType:{name:"ReactNode"},description:""}}}},"../../packages/react/dist/button/index.js":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{$n:()=>Button,rl:()=>ButtonFillStyle,Mp:()=>ButtonSize,Ak:()=>ButtonVariant});var ButtonVariant,t,ButtonSize,ButtonFillStyle,styled_components_browser_esm=__webpack_require__("../../node_modules/styled-components/dist/styled-components.browser.esm.js");(t=ButtonVariant||(ButtonVariant={})).Primary="primary",t.Secondary="secondary",t.Destruct="destruct",function(t){t.Small="small",t.Default="default"}(ButtonSize||(ButtonSize={})),function(t){t.Filled="filled",t.Outline="outline",t.None="none"}(ButtonFillStyle||(ButtonFillStyle={}));const Button=styled_components_browser_esm.Ay.button`
+`,CommentBlock=({children})=>react.createElement(CommentContainer,null,children);CommentBlock.__docgenInfo={description:"",methods:[],displayName:"CommentBlock",props:{children:{required:!0,tsType:{name:"ReactNode"},description:""}}}},"../../packages/react/dist/button/index.js":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{$n:()=>Button,rl:()=>ButtonFillStyle,Mp:()=>ButtonSize,Ak:()=>ButtonVariant});var ButtonVariant,t,ButtonSize,ButtonFillStyle,styled_components_browser_esm=__webpack_require__("../../node_modules/styled-components/dist/styled-components.browser.esm.js"),utils=__webpack_require__("../../packages/react/dist/theme/utils/index.js");(t=ButtonVariant||(ButtonVariant={})).Primary="primary",t.Secondary="secondary",t.Destruct="destruct",function(t){t.Small="small",t.Default="default"}(ButtonSize||(ButtonSize={})),function(t){t.Filled="filled",t.Outline="outline",t.None="none"}(ButtonFillStyle||(ButtonFillStyle={}));const Button=styled_components_browser_esm.Ay.button`
   display: inline-flex;
   width: ${({iconOnly:r=!1,size:o=ButtonSize.Default})=>r?o===ButtonSize.Default?"44px":"30px":"100%"};
   align-items: center;
@@ -29,7 +29,7 @@
   cursor: pointer;
   flex-shrink: 0;
 
-  background-color: ${({theme:r,variant:o=ButtonVariant.Primary})=>o===ButtonVariant.Primary?r.colors.primary.base:o===ButtonVariant.Secondary?r.colors.secondary.base:r.colors.error.base};
+  background-color: ${({theme:r,variant:o=ButtonVariant.Primary})=>o===ButtonVariant.Primary?r.colors.primary.base:o===ButtonVariant.Secondary?(0,utils.WI)("secondary"):r.colors.error.base};
 
   color: ${({theme:r,variant:o=ButtonVariant.Primary})=>o===ButtonVariant.Primary?r.colors.textSecondary.base:o===ButtonVariant.Secondary?r.colors.textPrimary.base:r.colors.textSecondary.base};
 
@@ -180,7 +180,7 @@
         margin-right: ${({theme:i})=>i.grid.large.margin} !important;
       `}
   }
-`},"../../packages/react/dist/notification/index.js":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{Fc:()=>Alert,t7:()=>NotificationVariant,qb:()=>Snackbar});var NotificationVariant,i,jsx_runtime=__webpack_require__("../../node_modules/react/jsx-runtime.js"),react=__webpack_require__("../../node_modules/react/index.js"),icons=__webpack_require__("../../packages/react/dist/icons/index.js");(i=NotificationVariant||(NotificationVariant={})).Success="success",i.Error="error",i.Info="info",i.Warning="warning";var dist_button=__webpack_require__("../../packages/react/dist/button/index.js"),utils=__webpack_require__("../../packages/react/dist/theme/utils/index.js"),styled_components_browser_esm=__webpack_require__("../../node_modules/styled-components/dist/styled-components.browser.esm.js");const NotificationContainer=styled_components_browser_esm.Ay.div`
+`},"../../packages/react/dist/notification/index.js":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{Fc:()=>Alert,t7:()=>NotificationVariant,qb:()=>Snackbar});var NotificationVariant,i,jsx_runtime=__webpack_require__("../../node_modules/react/jsx-runtime.js"),react=__webpack_require__("../../node_modules/react/index.js"),icons=__webpack_require__("../../packages/react/dist/icons/index.js");(i=NotificationVariant||(NotificationVariant={})).Success="success",i.Error="error",i.Info="info",i.Warning="warning";var dist_button=__webpack_require__("../../packages/react/dist/button/index.js"),styled_components_browser_esm=__webpack_require__("../../node_modules/styled-components/dist/styled-components.browser.esm.js");const NotificationContainer=styled_components_browser_esm.Ay.div`
   display: flex;
   justify-content: center;
   width: 100%;
@@ -216,6 +216,11 @@
         color: var(--colors-background-base);
         border: 1px solid var(--colors-success-base);
         box-shadow: 0px 2px 8px 0px var(--colors-success-base);
+        button {
+          svg {
+            fill: var(--colors-background-base) !important;
+          }
+        }
       `:styled_components_browser_esm.AH`
         background-color: var(--colors-warning-base);
         color: var(--colors-textPrimary-base);
@@ -247,7 +252,7 @@
   margin-right: 40px;
   font-size: 0.9rem;
   margin-bottom: 4px;
-`,Alert=t=>{const{id:i,title:o,visible:n,variant:r=NotificationVariant.Error,onClose:e,idToFocusOnClose:a,children:s}=t,l=(0,react.useRef)(null);return(0,react.useEffect)((()=>{n&&l.current&&l.current.focus()}),[n]),(0,jsx_runtime.jsx)(NotificationContainer,{id:i,role:"status","aria-live":"assertive",children:(0,jsx_runtime.jsxs)(NotificationContent,{visible:!!n,variant:r,children:[(0,jsx_runtime.jsxs)(NotificationHeader,{children:[(0,jsx_runtime.jsx)(NotificationTitle,{children:o}),(0,jsx_runtime.jsx)(dist_button.$n,{id:`${i}-close-button`,iconOnly:!0,ref:l,fill:r===NotificationVariant.Error?dist_button.rl.Filled:dist_button.rl.None,variant:r===NotificationVariant.Error?dist_button.Ak.Destruct:dist_button.Ak.Primary,"aria-label":"Close",onClick:t=>{e?.(t),a&&document.getElementById(a)?.focus()},children:(0,jsx_runtime.jsx)(icons.CloseIcon,{fill:r===NotificationVariant.Success?(0,utils.at)("background"):""})})]}),(0,jsx_runtime.jsx)(NotificationAdditionalContent,{children:s})]})})},SnackbarContainer=styled_components_browser_esm.Ay.div`
+`,Alert=t=>{const{id:i,title:o,visible:n,variant:e=NotificationVariant.Error,onClose:r,idToFocusOnClose:a,children:l}=t,s=(0,react.useRef)(null);return(0,react.useEffect)((()=>{n&&s.current&&s.current.focus()}),[n]),(0,jsx_runtime.jsx)(NotificationContainer,{id:i,role:"status","aria-live":"assertive",children:(0,jsx_runtime.jsxs)(NotificationContent,{visible:!!n,variant:e,children:[(0,jsx_runtime.jsxs)(NotificationHeader,{children:[(0,jsx_runtime.jsx)(NotificationTitle,{children:o}),(0,jsx_runtime.jsx)(dist_button.$n,{id:`${i}-close-button`,iconOnly:!0,ref:s,fill:e===NotificationVariant.Error?dist_button.rl.Filled:dist_button.rl.None,variant:e===NotificationVariant.Error?dist_button.Ak.Destruct:dist_button.Ak.Primary,"aria-label":"Close",onClick:t=>{r?.(t),a&&document.getElementById(a)?.focus()},children:(0,jsx_runtime.jsx)(icons.CloseIcon,{})})]}),(0,jsx_runtime.jsx)(NotificationAdditionalContent,{children:l})]})})},SnackbarContainer=styled_components_browser_esm.Ay.div`
   display: ${({visible:o})=>o?"flex":"none"};
   position: fixed;
   bottom: 20px;
@@ -320,5 +325,5 @@
   flex-grow: 1;
   display: flex;
   align-items: center;
-`,Snackbar=t=>{const{id:o,message:e,visible:i,duration:r=5e3,variant:s=NotificationVariant.Success,onClose:n,idToFocusOnClose:a}=t;let l=null;const c=(0,react.useRef)(null),u=t=>{n?.(t),a&&document.getElementById(a)?.focus()};return(0,react.useEffect)((()=>{i&&c.current&&(c.current.focus(),l=setTimeout((()=>{u()}),r))}),[i]),(0,jsx_runtime.jsxs)(SnackbarContainer,{visible:!!i,variant:s,"aria-live":"polite",children:[(0,jsx_runtime.jsx)(SnackbarMessage,{children:e}),(0,jsx_runtime.jsx)(dist_button.$n,{id:`${o}-close-button`,fill:dist_button.rl.None,iconOnly:!0,size:dist_button.Mp.Small,"aria-label":"Close",ref:c,onClick:u,children:(0,jsx_runtime.jsx)(icons.CloseIcon,{fill:s===NotificationVariant.Error||s===NotificationVariant.Success?(0,utils.at)("background"):(0,utils.at)("textPrimary")})})]})}}}]);
-//# sourceMappingURL=notification-Alert-stories.8ef9ad08.iframe.bundle.js.map
+`;var utils=__webpack_require__("../../packages/react/dist/theme/utils/index.js");const Snackbar=e=>{const{id:t,message:o,visible:i,duration:r=5e3,variant:n=NotificationVariant.Success,onClose:s,idToFocusOnClose:a}=e;let l=null;const c=(0,react.useRef)(null),u=e=>{s?.(e),a&&document.getElementById(a)?.focus()};return(0,react.useEffect)((()=>{i&&c.current&&(c.current.focus(),l=setTimeout((()=>{u()}),r))}),[i]),(0,jsx_runtime.jsxs)(SnackbarContainer,{visible:!!i,variant:n,"aria-live":"polite",children:[(0,jsx_runtime.jsx)(SnackbarMessage,{children:o}),(0,jsx_runtime.jsx)(dist_button.$n,{id:`${t}-close-button`,fill:dist_button.rl.None,iconOnly:!0,size:dist_button.Mp.Small,"aria-label":"Close",ref:c,onClick:u,children:(0,jsx_runtime.jsx)(icons.CloseIcon,{fill:n===NotificationVariant.Error||n===NotificationVariant.Success?(0,utils.WI)("background"):(0,utils.WI)("textPrimary")})})]})}}}]);
+//# sourceMappingURL=notification-Alert-stories.d80111a7.iframe.bundle.js.map
