@@ -1,4 +1,4 @@
-"use strict";(self.webpackChunkstorybook_react19=self.webpackChunkstorybook_react19||[]).push([[559],{"./src/utils/index.ts":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{bO:()=>CommentBlock,ur:()=>DescriptionBlock,Tx:()=>ImportBlock});var grid=__webpack_require__("../../packages/react/dist/grid/index.js"),react=__webpack_require__("../../node_modules/react/index.js"),styled_components_browser_esm=__webpack_require__("../../node_modules/styled-components/dist/styled-components.browser.esm.js");const ImportBlockDiv=styled_components_browser_esm.Ay.div`
+"use strict";(self.webpackChunkstorybook_react19=self.webpackChunkstorybook_react19||[]).push([[494],{"./src/button/example.stories.tsx":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.r(__webpack_exports__),__webpack_require__.d(__webpack_exports__,{Example:()=>Example,__namedExportsOrder:()=>__namedExportsOrder,default:()=>__WEBPACK_DEFAULT_EXPORT__});var react__WEBPACK_IMPORTED_MODULE_0__=__webpack_require__("../../node_modules/react/index.js"),_tiger_analytics_react_button__WEBPACK_IMPORTED_MODULE_1__=__webpack_require__("../../packages/react/dist/button/index.js"),_utils__WEBPACK_IMPORTED_MODULE_2__=__webpack_require__("./src/utils/index.ts");const __WEBPACK_DEFAULT_EXPORT__={title:"Button/Example",component:_tiger_analytics_react_button__WEBPACK_IMPORTED_MODULE_1__.$n},description=react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment,null,"Sets focus on the button after 4 second"),Example=(()=>{const buttonRef=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);return(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)((()=>{buttonRef.current&&setTimeout((()=>{buttonRef.current?.focus()}),4e3)}),[]),react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment,null,react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tiger_analytics_react_button__WEBPACK_IMPORTED_MODULE_1__.$n,{id:"test-button-1",ref:buttonRef,variant:_tiger_analytics_react_button__WEBPACK_IMPORTED_MODULE_1__.Ak.Secondary,onClick:()=>window.alert("hi there!")},"Button"),react__WEBPACK_IMPORTED_MODULE_0__.createElement(_utils__WEBPACK_IMPORTED_MODULE_2__.ur,{description}))}).bind({});Example.args={};const __namedExportsOrder=["Example"];Example.parameters={...Example.parameters,docs:{...Example.parameters?.docs,source:{originalSource:"() => {\n  const buttonRef = useRef<HTMLButtonElement>(null);\n  useEffect(() => {\n    if (buttonRef.current) {\n      setTimeout(() => {\n        buttonRef.current?.focus();\n      }, 4000);\n    }\n  }, []);\n  return <>\n      <Button id=\"test-button-1\" ref={buttonRef} variant={ButtonVariant.Secondary} onClick={() => window.alert('hi there!')}>\n        Button\n      </Button>\n      <DescriptionBlock description={description} />\n    </>;\n}",...Example.parameters?.docs?.source}}}},"./src/utils/index.ts":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{bO:()=>CommentBlock,ur:()=>DescriptionBlock,Tx:()=>ImportBlock});var grid=__webpack_require__("../../packages/react/dist/grid/index.js"),react=__webpack_require__("../../node_modules/react/index.js"),styled_components_browser_esm=__webpack_require__("../../node_modules/styled-components/dist/styled-components.browser.esm.js");const ImportBlockDiv=styled_components_browser_esm.Ay.div`
   padding-bottom: 10px;
   border-bottom: 1px solid var(--colors-primary-base);
   margin-bottom: 10px;
@@ -24,7 +24,7 @@
   font-family: ${({theme:r})=>r.global.specificFontFamily};
   padding: ${({iconOnly:r=!1})=>r?0:" 0 1.5rem"};
   border: none;
-  border-radius: 5px;
+  border-radius: ${({theme:r})=>r.global.componentRadius};
   transition: all 0.5s;
   cursor: pointer;
   flex-shrink: 0;
@@ -180,100 +180,5 @@
         margin-right: ${({theme:i})=>i.grid.large.margin} !important;
       `}
   }
-`},"../../packages/react/dist/overlay/index.js":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{_s:()=>Drawer,V:()=>DrawerSlide,aF:()=>Modal,hJ:()=>Overlay,Lf:()=>OverlayContentAlign,dc:()=>useDrawerController});var OverlayContentAlign,t,jsx_runtime=__webpack_require__("../../node_modules/react/jsx-runtime.js"),es2015=__webpack_require__("../../node_modules/react-focus-lock/dist/es2015/index.js");(t=OverlayContentAlign||(OverlayContentAlign={})).TopLeft="top left",t.TopCenter="top center",t.TopRight="top right",t.MiddleLeft="middle left",t.MiddleCenter="middle center",t.MiddleRight="middle right",t.BottomLeft="bottom left",t.BottomCenter="bottom center",t.BottomRight="bottom right";var styled_components_browser_esm=__webpack_require__("../../node_modules/styled-components/dist/styled-components.browser.esm.js");const OverlayContainer=styled_components_browser_esm.Ay.div`
-  display: ${({visible:e})=>e?"flex":"none"};
-  align-items: ${({overlayContentAlign:e})=>"middle"===e.split(" ")[0]?"center":"top"===e.split(" ")[0]?"flex-start":"flex-end"};
-
-  justify-content: ${({overlayContentAlign:e})=>"center"===e.split(" ")[1]?"center":"left"===e.split(" ")[1]?"flex-start":"flex-end"};
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1000;
-  background: ${({visible:e})=>e?"rgba(0, 0, 0, 0.5)":"none"};
-  transition: all 0.3s ease;
-`,Overlay=e=>{const{id:o,visible:t,overlayContentAlign:n=OverlayContentAlign.MiddleCenter,idToFocusOnClose:r,children:i}=e;return(0,jsx_runtime.jsx)(es2015.Ay,{disabled:!t,onDeactivation:()=>{r&&setTimeout((()=>{document.getElementById(r)?.focus()}),0)},children:(0,jsx_runtime.jsx)(OverlayContainer,{id:o,visible:t,overlayContentAlign:n,children:i})})},ModalContainer=styled_components_browser_esm.Ay.div`
-  background: var(--colors-background-hover);
-  border-radius: var(--global-componentRadius);
-  display: flex;
-  flex-direction: column;
-  padding: 0.5rem 1rem 1rem;
-  width: 90%;
-  max-width: 550px;
-
-  ${({theme:e})=>styled_components_browser_esm.AH`
-    @media screen and (min-width: ${`${e.breakpoints.medium}`}) {
-      width: 70%;
-      max-width: 600px;
-    }
-    @media (min-width: 768px) {
-    }
-  `}
-
-  @media (min-width: 1024px) {
-    width: 50%;
-    max-width: 800px;
-  }
-`,ModalHeader=styled_components_browser_esm.Ay.div`
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.5rem;
-`,ModalHeaderTitle=styled_components_browser_esm.Ay.h2`
-  flex-grow: 1;
-  color: var(--colors-secondary-base);
-`;var dist_button=__webpack_require__("../../packages/react/dist/button/index.js"),icons=__webpack_require__("../../packages/react/dist/icons/index.js");const Modal=o=>{const{id:l,title:e,visible:t=!1,onClose:i,children:a,idToFocusOnClose:r}=o;return(0,jsx_runtime.jsx)(Overlay,{id:`${l}-modal-overlay`,visible:t,idToFocusOnClose:r,children:(0,jsx_runtime.jsxs)(ModalContainer,{role:"dialog","aria-modal":"true","aria-labelledby":"${`${this.id}-modal-title`}",children:[(0,jsx_runtime.jsxs)(ModalHeader,{children:[(0,jsx_runtime.jsx)(ModalHeaderTitle,{id:`${l}-modal-title`,children:e}),(0,jsx_runtime.jsx)(dist_button.$n,{id:`${l}-close-button`,iconOnly:!0,fill:dist_button.rl.None,variant:dist_button.Ak.Primary,"aria-label":"Close",onClick:o=>{i?.(o),r&&document.getElementById(r)?.focus()},children:(0,jsx_runtime.jsx)(icons.CloseIcon,{})})]}),a]})})};var react=__webpack_require__("../../node_modules/react/index.js");const DrawerContainer=styled_components_browser_esm.Ay.div`
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: 0.6rem 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  width: 444px;
-  height: 100%;
-  background-color: white;
-  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
-  transform: translateX(100%);
-  animation: ${({visible:o})=>o?"slideIn 0.4s ease-in-out forwards":"none"};
-
-  @keyframes slideIn {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(0);
-    }
-  }
-
-  @media (min-width: 768px) {
-    .modal-container {
-      width: 70%;
-      max-width: 600px;
-    }
-  }
-
-  h2 {
-    border: 1px solid var(--colors-textPrimary-hover);
-    border-bottom: 2px solid var(--colors-warning-base);
-    border-radius: 5px 5px 0 0;
-    padding: 0 8px;
-  }
-`,DrawerBody=styled_components_browser_esm.Ay.div`
-  flex-grow: 1;
-  overflow-y: auto;
-`,DrawerFooter=styled_components_browser_esm.Ay.div`
-  display: flex;
-  justify-content: space-between;
-  padding-top: 8px;
-  border-top: 1px solid var(--colors-textPrimary-hover);
-
-  button {
-    width: fit-content;
-  }
-`,DrawerSlideContainer=styled_components_browser_esm.Ay.div`
-  display: flex;
-  flex-direction: column;
-`,DrawerContext=(0,react.createContext)({setActiveSlide:()=>{}}),useDrawerController=()=>{let e=e=>{};const t=(0,react.useContext)(DrawerContext);return t?e=t?.setActiveSlide:(r=>{if("undefined"==typeof jest)throw new Error(r);console.warn(r)})("useDrawerController must be used within a Drawer"),{setActiveSlide:e}},Drawer=t=>{const{id:e,visible:o,title:r,onClose:i,onSubmit:n,idToFocusOnClose:a,children:l}=t,[s,c]=(0,react.useState)([]),[d,u]=(0,react.useState)(0);(0,react.useEffect)((()=>{c(react.Children.toArray(l)),o&&u(0)}),[o,l]);const p=d===s.length-1;return(0,jsx_runtime.jsx)(Overlay,{id:`${e}-overlay-container`,visible:o,idToFocusOnClose:a,children:(0,jsx_runtime.jsx)(DrawerContext.Provider,{value:{setActiveSlide:t=>{t>=0&&t<s.length&&u(t)}},children:(0,jsx_runtime.jsxs)(DrawerContainer,{visible:o,role:"dialog","aria-labelledby":`${e}-drawer-title`,children:[(0,jsx_runtime.jsx)(dist_button.$n,{style:{alignSelf:"end"},id:"${`${this.id}-close-button`}",iconOnly:!0,fill:dist_button.rl.None,variant:dist_button.Ak.Primary,"aria-label":"Close",onClick:t=>{t.stopPropagation(),i?.()},children:(0,jsx_runtime.jsx)(icons.CloseIcon,{})}),(0,jsx_runtime.jsx)("h2",{id:`${e}-drawer-title`,children:r}),(0,jsx_runtime.jsx)(DrawerBody,{children:s[d]}),(0,jsx_runtime.jsxs)(DrawerFooter,{children:[(0,jsx_runtime.jsx)(dist_button.$n,{id:`${e}-next-or-button`,variant:dist_button.Ak.Secondary,onClick:d===s.length-1?async t=>{t.stopPropagation();const e=s[d];e?.props?.validate?await e.props.validate()&&n?.():n?.()}:async()=>{if(d<s.length-1){const t=s[d];t?.props?.validate?await t.props.validate()&&u(d+1):u(d+1)}},children:p?"Submit":"Next"}),(0,jsx_runtime.jsx)(dist_button.$n,{id:`${e}-previous-button`,fill:dist_button.rl.None,onClick:()=>{d>0&&u(d-1)},style:{display:0===d?"none":""},children:"Previous"})]})]})})})},DrawerSlide=r=>{const{id:e,title:i,children:t}=r;return(0,jsx_runtime.jsx)(DrawerSlideContainer,{id:e,children:t})}}}]);
-//# sourceMappingURL=559.ee5bfef0.iframe.bundle.js.map
+`}}]);
+//# sourceMappingURL=button-example-stories.296e2a64.iframe.bundle.js.map

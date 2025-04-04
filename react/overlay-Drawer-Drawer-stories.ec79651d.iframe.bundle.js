@@ -37,24 +37,33 @@
   width: 0px;
   height: 0px;
 `,StyledCheckbox=styled_components_browser_esm.Ay.div`
-  width: ${({size:o})=>o===FieldSize.Default?"40px":"30px"};
-  height: ${({size:o})=>o===FieldSize.Default?"40px":"30px"};
+  width: ${({size:e})=>e===FieldSize.Default?"40px":"30px"};
+  height: ${({size:e})=>e===FieldSize.Default?"40px":"30px"};
   border-radius: var(--global-componentRadius);
   border: 1px solid var(--colors-primary-base);
-  background-color: white;
+  background-color: var(--colors-background-base);
   transition: all 0.25s;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  ${({checked:o})=>o&&styled_components_browser_esm.AH`
+  ${({checked:e,size:o})=>e&&styled_components_browser_esm.AH`
       background-color: var(--colors-primary-base);
       border-color: var(--colors-primary-base);
+
+      svg {
+        fill: var(--colors-background-base);
+        width: ${o===FieldSize.Default?"30px":"24px"};
+        height: ${o===FieldSize.Default?"30px":"24px"};
+      }
     `}
 
   &:focus-within {
     outline: none;
     border: 2px solid var(--colors-primary-active);
   }
-`,Checkbox=e=>{const{id:i,size:r=FieldSize.Default,label:c,description:d,disabled:t=!1,checked:o=!1,onChange:s,onChangeHandler:l,...n}=e,h=(0,react.useRef)(null);return(0,jsx_runtime.jsxs)(FieldWrapper,{disabled:t,children:[(0,jsx_runtime.jsxs)(StyledCheckboxContainer,{children:[(0,jsx_runtime.jsx)(StyledCheckbox,{id:i,size:r,checked:o,onClick:()=>{h&&h.current&&!t&&h.current.click()},children:(0,jsx_runtime.jsx)(StyledCheckboxInput,{id:`${i}-checkbox`,ref:h,type:"checkbox",disabled:t,checked:o,"aria-describedby":d?`${i}-description`:"",onChange:e=>{s?s(e):l?.(e.target.checked)},...n})}),c&&(0,jsx_runtime.jsx)("label",{htmlFor:`${i}-checkbox`,children:c})]}),d&&(0,jsx_runtime.jsx)(FieldDescription,{id:`${i}-description`,children:d})]})},StyledToggleContainer=styled_components_browser_esm.Ay.div`
+`;var icons=__webpack_require__("../../packages/react/dist/icons/index.js");const Checkbox=e=>{const{id:i,size:r=FieldSize.Default,label:c,description:o,disabled:d=!1,checked:t=!1,onChange:s,onChangeHandler:n,...l}=e,h=(0,react.useRef)(null);return(0,jsx_runtime.jsxs)(FieldWrapper,{disabled:d,children:[(0,jsx_runtime.jsxs)(StyledCheckboxContainer,{children:[(0,jsx_runtime.jsxs)(StyledCheckbox,{id:i,size:r,checked:t,onClick:()=>{h&&h.current&&!d&&h.current.click()},children:[(0,jsx_runtime.jsx)(StyledCheckboxInput,{id:`${i}-checkbox`,ref:h,type:"checkbox",disabled:d,checked:t,"aria-describedby":o?`${i}-description`:"",onChange:e=>{s?s(e):n?.(e.target.checked)},...l}),t?(0,jsx_runtime.jsx)(icons.DoneIcon,{}):null]}),c&&(0,jsx_runtime.jsx)("label",{htmlFor:`${i}-checkbox`,children:c})]}),o&&(0,jsx_runtime.jsx)(FieldDescription,{id:`${i}-description`,children:o})]})},StyledToggleContainer=styled_components_browser_esm.Ay.div`
   display: flex;
   align-items: center;
   gap: 10px;
@@ -102,4 +111,4 @@
     border: 2px solid var(--colors-primary-hover);
   }
 `,Toggle=e=>{const{id:i,size:r=FieldSize.Default,label:l,description:d,disabled:t=!1,checked:o=!1,onChange:s,onChangeHandler:c,...n}=e,a=(0,react.useRef)(null);return(0,jsx_runtime.jsxs)(FieldWrapper,{disabled:t,children:[(0,jsx_runtime.jsxs)(StyledToggleContainer,{children:[(0,jsx_runtime.jsx)(StyledToggle,{id:i,size:r,checked:o,onClick:()=>{a&&a.current&&!t&&a.current.click()},children:(0,jsx_runtime.jsx)(StyledToggleInput,{id:`${i}-checkbox`,ref:a,type:"checkbox",disabled:t,checked:o,"aria-describedby":d?`${i}-description`:"",onChange:e=>{s?s(e):c?.(e.target.checked)},...n})}),l&&(0,jsx_runtime.jsx)("label",{htmlFor:`${i}-checkbox`,children:l})]}),d&&(0,jsx_runtime.jsx)(FieldDescription,{id:`${i}-description`,children:d})]})}}}]);
-//# sourceMappingURL=overlay-Drawer-Drawer-stories.396b608a.iframe.bundle.js.map
+//# sourceMappingURL=overlay-Drawer-Drawer-stories.ec79651d.iframe.bundle.js.map

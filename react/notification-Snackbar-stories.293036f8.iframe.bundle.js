@@ -24,7 +24,7 @@
   font-family: ${({theme:r})=>r.global.specificFontFamily};
   padding: ${({iconOnly:r=!1})=>r?0:" 0 1.5rem"};
   border: none;
-  border-radius: 5px;
+  border-radius: ${({theme:r})=>r.global.componentRadius};
   transition: all 0.5s;
   cursor: pointer;
   flex-shrink: 0;
@@ -326,4 +326,4 @@
   display: flex;
   align-items: center;
 `;var utils=__webpack_require__("../../packages/react/dist/theme/utils/index.js");const Snackbar=e=>{const{id:t,message:o,visible:i,duration:r=5e3,variant:n=NotificationVariant.Success,onClose:s,idToFocusOnClose:a}=e;let l=null;const c=(0,react.useRef)(null),u=e=>{s?.(e),a&&document.getElementById(a)?.focus()};return(0,react.useEffect)((()=>{i&&c.current&&(c.current.focus(),l=setTimeout((()=>{u()}),r))}),[i]),(0,jsx_runtime.jsxs)(SnackbarContainer,{visible:!!i,variant:n,"aria-live":"polite",children:[(0,jsx_runtime.jsx)(SnackbarMessage,{children:o}),(0,jsx_runtime.jsx)(dist_button.$n,{id:`${t}-close-button`,fill:dist_button.rl.None,iconOnly:!0,size:dist_button.Mp.Small,"aria-label":"Close",ref:c,onClick:u,children:(0,jsx_runtime.jsx)(icons.CloseIcon,{fill:n===NotificationVariant.Error||n===NotificationVariant.Success?(0,utils.WI)("background"):(0,utils.WI)("textPrimary")})})]})}}}]);
-//# sourceMappingURL=notification-Snackbar-stories.d0ab9084.iframe.bundle.js.map
+//# sourceMappingURL=notification-Snackbar-stories.293036f8.iframe.bundle.js.map

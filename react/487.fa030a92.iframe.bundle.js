@@ -1,4 +1,4 @@
-"use strict";(self.webpackChunkstorybook_react19=self.webpackChunkstorybook_react19||[]).push([[635],{"./src/button/BaseButton.stories.tsx":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.r(__webpack_exports__),__webpack_require__.d(__webpack_exports__,{CodeAndAccessibility:()=>CodeAndAccessibility,__namedExportsOrder:()=>__namedExportsOrder,default:()=>__WEBPACK_DEFAULT_EXPORT__});var react__WEBPACK_IMPORTED_MODULE_0__=__webpack_require__("../../node_modules/react/index.js"),_tiger_analytics_react_button__WEBPACK_IMPORTED_MODULE_1__=__webpack_require__("../../packages/react/dist/button/index.js"),_tiger_analytics_react_icons__WEBPACK_IMPORTED_MODULE_2__=__webpack_require__("../../packages/react/dist/icons/index.js"),_utils__WEBPACK_IMPORTED_MODULE_3__=__webpack_require__("./src/utils/index.ts");const __WEBPACK_DEFAULT_EXPORT__={title:"Button",component:_tiger_analytics_react_button__WEBPACK_IMPORTED_MODULE_1__.$n,parameters:{controls:{expanded:!0}},argTypes:{id:{description:"Mandatory - unique id for testing",table:{defaultValue:{summary:""}},control:"text"},variant:{options:[_tiger_analytics_react_button__WEBPACK_IMPORTED_MODULE_1__.Ak.Primary,_tiger_analytics_react_button__WEBPACK_IMPORTED_MODULE_1__.Ak.Secondary,_tiger_analytics_react_button__WEBPACK_IMPORTED_MODULE_1__.Ak.Destruct],description:"different styles of the button",table:{defaultValue:{summary:_tiger_analytics_react_button__WEBPACK_IMPORTED_MODULE_1__.Ak.Primary}},control:{type:"select"}},fill:{options:[_tiger_analytics_react_button__WEBPACK_IMPORTED_MODULE_1__.rl.Filled,_tiger_analytics_react_button__WEBPACK_IMPORTED_MODULE_1__.rl.Outline,_tiger_analytics_react_button__WEBPACK_IMPORTED_MODULE_1__.rl.None],description:"different background styles of the button",table:{defaultValue:{summary:_tiger_analytics_react_button__WEBPACK_IMPORTED_MODULE_1__.rl.Filled}},control:{type:"select"}},size:{options:[_tiger_analytics_react_button__WEBPACK_IMPORTED_MODULE_1__.Mp.Default,_tiger_analytics_react_button__WEBPACK_IMPORTED_MODULE_1__.Mp.Small],description:"size of the button",table:{defaultValue:{summary:_tiger_analytics_react_button__WEBPACK_IMPORTED_MODULE_1__.Mp.Default}},control:{type:"select"}},iconOnly:{description:"determines if the button contains only icon. ariaLabel is mandatory if iconOnly is true.",table:{defaultValue:{summary:"false"}},control:"boolean"}}},description=react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment,null,"The Button component is a versatile and customizable button designed to fit various UI needs within your design system. It currently supports multiple variants and sizes, offering flexibility in adapting to different contexts and user interactions. Future updates will include additional features, such as icon support and new button types, allowing for even greater customization and functionality.",react__WEBPACK_IMPORTED_MODULE_0__.createElement("br",null),react__WEBPACK_IMPORTED_MODULE_0__.createElement("br",null),react__WEBPACK_IMPORTED_MODULE_0__.createElement("b",null,"Note: This component inherits all the properties of a standard HTML button element. You can use attributes like onClick, disabled, type, etc., just as you would with a regular <button> tag in addition to below\n    props.")),CodeAndAccessibility=(args=>react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment,null,react__WEBPACK_IMPORTED_MODULE_0__.createElement(_utils__WEBPACK_IMPORTED_MODULE_3__.Tx,{importStatement:"import { Button } from '@tiger-analytics/react/button';"}),react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tiger_analytics_react_button__WEBPACK_IMPORTED_MODULE_1__.$n,{...args,onClick:()=>window.alert("hi there!")},args.iconOnly?react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tiger_analytics_react_icons__WEBPACK_IMPORTED_MODULE_2__.SettingsIcon,null):"Settings"),react__WEBPACK_IMPORTED_MODULE_0__.createElement(_utils__WEBPACK_IMPORTED_MODULE_3__.ur,{description}))).bind({});CodeAndAccessibility.args={id:"test-button",variant:_tiger_analytics_react_button__WEBPACK_IMPORTED_MODULE_1__.Ak.Primary,fill:_tiger_analytics_react_button__WEBPACK_IMPORTED_MODULE_1__.rl.Filled,size:_tiger_analytics_react_button__WEBPACK_IMPORTED_MODULE_1__.Mp.Default,iconOnly:!1,disabled:!1};const __namedExportsOrder=["CodeAndAccessibility"];CodeAndAccessibility.parameters={...CodeAndAccessibility.parameters,docs:{...CodeAndAccessibility.parameters?.docs,source:{originalSource:"(args: ButtonProps) => {\n  return <>\n      <ImportBlock importStatement={`import { Button } from '@tiger-analytics/react/button';`} />\n      <Button {...args} onClick={() => window.alert('hi there!')}>\n        {args.iconOnly ? <SettingsIcon /> : 'Settings'}\n      </Button>\n      <DescriptionBlock description={description} />\n    </>;\n}",...CodeAndAccessibility.parameters?.docs?.source}}}},"./src/utils/index.ts":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{bO:()=>CommentBlock,ur:()=>DescriptionBlock,Tx:()=>ImportBlock});var grid=__webpack_require__("../../packages/react/dist/grid/index.js"),react=__webpack_require__("../../node_modules/react/index.js"),styled_components_browser_esm=__webpack_require__("../../node_modules/styled-components/dist/styled-components.browser.esm.js");const ImportBlockDiv=styled_components_browser_esm.Ay.div`
+"use strict";(self.webpackChunkstorybook_react19=self.webpackChunkstorybook_react19||[]).push([[487],{"./src/utils/index.ts":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{bO:()=>CommentBlock,ur:()=>DescriptionBlock,Tx:()=>ImportBlock});var grid=__webpack_require__("../../packages/react/dist/grid/index.js"),react=__webpack_require__("../../node_modules/react/index.js"),styled_components_browser_esm=__webpack_require__("../../node_modules/styled-components/dist/styled-components.browser.esm.js");const ImportBlockDiv=styled_components_browser_esm.Ay.div`
   padding-bottom: 10px;
   border-bottom: 1px solid var(--colors-primary-base);
   margin-bottom: 10px;
@@ -24,7 +24,7 @@
   font-family: ${({theme:r})=>r.global.specificFontFamily};
   padding: ${({iconOnly:r=!1})=>r?0:" 0 1.5rem"};
   border: none;
-  border-radius: 5px;
+  border-radius: ${({theme:r})=>r.global.componentRadius};
   transition: all 0.5s;
   cursor: pointer;
   flex-shrink: 0;
@@ -180,5 +180,110 @@
         margin-right: ${({theme:i})=>i.grid.large.margin} !important;
       `}
   }
-`}}]);
-//# sourceMappingURL=button-BaseButton-stories.9e54cfe9.iframe.bundle.js.map
+`},"../../packages/react/dist/overlay/index.js":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{i4:()=>ArcLoader,_s:()=>Drawer,V:()=>DrawerSlide,aF:()=>Modal,hJ:()=>Overlay,Lf:()=>OverlayContentAlign,dc:()=>useDrawerController});var OverlayContentAlign,t,jsx_runtime=__webpack_require__("../../node_modules/react/jsx-runtime.js"),es2015=__webpack_require__("../../node_modules/react-focus-lock/dist/es2015/index.js");(t=OverlayContentAlign||(OverlayContentAlign={})).TopLeft="top left",t.TopCenter="top center",t.TopRight="top right",t.MiddleLeft="middle left",t.MiddleCenter="middle center",t.MiddleRight="middle right",t.BottomLeft="bottom left",t.BottomCenter="bottom center",t.BottomRight="bottom right";var styled_components_browser_esm=__webpack_require__("../../node_modules/styled-components/dist/styled-components.browser.esm.js");const OverlayContainer=styled_components_browser_esm.Ay.div`
+  display: ${({visible:e})=>e?"flex":"none"};
+  align-items: ${({overlayContentAlign:e})=>"middle"===e.split(" ")[0]?"center":"top"===e.split(" ")[0]?"flex-start":"flex-end"};
+
+  justify-content: ${({overlayContentAlign:e})=>"center"===e.split(" ")[1]?"center":"left"===e.split(" ")[1]?"flex-start":"flex-end"};
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background: ${({visible:e})=>e?"rgba(0, 0, 0, 0.5)":"none"};
+  transition: all 0.3s ease;
+`,Overlay=e=>{const{id:o,visible:t,overlayContentAlign:n=OverlayContentAlign.MiddleCenter,idToFocusOnClose:r,children:i}=e;return(0,jsx_runtime.jsx)(es2015.Ay,{disabled:!t,onDeactivation:()=>{r&&setTimeout((()=>{document.getElementById(r)?.focus()}),0)},children:(0,jsx_runtime.jsx)(OverlayContainer,{id:o,visible:t,overlayContentAlign:n,children:i})})},ModalContainer=styled_components_browser_esm.Ay.div`
+  background: var(--colors-background-hover);
+  border-radius: var(--global-componentRadius);
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1rem 1rem;
+  width: 90%;
+  max-width: 550px;
+
+  ${({theme:e})=>styled_components_browser_esm.AH`
+    @media screen and (min-width: ${`${e.breakpoints.medium}`}) {
+      width: 70%;
+      max-width: 600px;
+    }
+    @media (min-width: 768px) {
+    }
+  `}
+
+  @media (min-width: 1024px) {
+    width: 50%;
+    max-width: 800px;
+  }
+`,ModalHeader=styled_components_browser_esm.Ay.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+`,ModalHeaderTitle=styled_components_browser_esm.Ay.h2`
+  flex-grow: 1;
+  color: var(--colors-secondary-base);
+`;var dist_button=__webpack_require__("../../packages/react/dist/button/index.js"),icons=__webpack_require__("../../packages/react/dist/icons/index.js");const Modal=o=>{const{id:l,title:e,visible:t=!1,onClose:i,children:a,idToFocusOnClose:r}=o;return(0,jsx_runtime.jsx)(Overlay,{id:`${l}-modal-overlay`,visible:t,idToFocusOnClose:r,children:(0,jsx_runtime.jsxs)(ModalContainer,{role:"dialog","aria-modal":"true","aria-labelledby":"${`${this.id}-modal-title`}",children:[(0,jsx_runtime.jsxs)(ModalHeader,{children:[(0,jsx_runtime.jsx)(ModalHeaderTitle,{id:`${l}-modal-title`,children:e}),(0,jsx_runtime.jsx)(dist_button.$n,{id:`${l}-close-button`,iconOnly:!0,fill:dist_button.rl.None,variant:dist_button.Ak.Primary,"aria-label":"Close",onClick:o=>{i?.(o),r&&document.getElementById(r)?.focus()},children:(0,jsx_runtime.jsx)(icons.CloseIcon,{})})]}),a]})})};var react=__webpack_require__("../../node_modules/react/index.js");const DrawerContainer=styled_components_browser_esm.Ay.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0.6rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 444px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  animation: ${({visible:o})=>o?"slideIn 0.4s ease-in-out forwards":"none"};
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .modal-container {
+      width: 70%;
+      max-width: 600px;
+    }
+  }
+
+  h2 {
+    border: 1px solid var(--colors-textPrimary-hover);
+    border-bottom: 2px solid var(--colors-warning-base);
+    border-radius: 5px 5px 0 0;
+    padding: 0 8px;
+  }
+`,DrawerBody=styled_components_browser_esm.Ay.div`
+  flex-grow: 1;
+  overflow-y: auto;
+`,DrawerFooter=styled_components_browser_esm.Ay.div`
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8px;
+  border-top: 1px solid var(--colors-textPrimary-hover);
+
+  button {
+    width: fit-content;
+  }
+`,DrawerSlideContainer=styled_components_browser_esm.Ay.div`
+  display: flex;
+  flex-direction: column;
+`,DrawerContext=(0,react.createContext)({setActiveSlide:()=>{}}),useDrawerController=()=>{let e=e=>{};const t=(0,react.useContext)(DrawerContext);return t?e=t?.setActiveSlide:(r=>{if("undefined"==typeof jest)throw new Error(r);console.warn(r)})("useDrawerController must be used within a Drawer"),{setActiveSlide:e}},Drawer=t=>{const{id:e,visible:o,title:r,onClose:i,onSubmit:n,idToFocusOnClose:a,children:l}=t,[s,c]=(0,react.useState)([]),[d,u]=(0,react.useState)(0);(0,react.useEffect)((()=>{c(react.Children.toArray(l)),o&&u(0)}),[o,l]);const p=d===s.length-1;return(0,jsx_runtime.jsx)(Overlay,{id:`${e}-overlay-container`,visible:o,idToFocusOnClose:a,children:(0,jsx_runtime.jsx)(DrawerContext.Provider,{value:{setActiveSlide:t=>{t>=0&&t<s.length&&u(t)}},children:(0,jsx_runtime.jsxs)(DrawerContainer,{visible:o,role:"dialog","aria-labelledby":`${e}-drawer-title`,children:[(0,jsx_runtime.jsx)(dist_button.$n,{style:{alignSelf:"end"},id:"${`${this.id}-close-button`}",iconOnly:!0,fill:dist_button.rl.None,variant:dist_button.Ak.Primary,"aria-label":"Close",onClick:t=>{t.stopPropagation(),i?.()},children:(0,jsx_runtime.jsx)(icons.CloseIcon,{})}),(0,jsx_runtime.jsx)("h2",{id:`${e}-drawer-title`,children:r}),(0,jsx_runtime.jsx)(DrawerBody,{children:s[d]}),(0,jsx_runtime.jsxs)(DrawerFooter,{children:[(0,jsx_runtime.jsx)(dist_button.$n,{id:`${e}-next-or-button`,variant:dist_button.Ak.Secondary,onClick:d===s.length-1?async t=>{t.stopPropagation();const e=s[d];e?.props?.validate?await e.props.validate()&&n?.():n?.()}:async()=>{if(d<s.length-1){const t=s[d];t?.props?.validate?await t.props.validate()&&u(d+1):u(d+1)}},children:p?"Submit":"Next"}),(0,jsx_runtime.jsx)(dist_button.$n,{id:`${e}-previous-button`,fill:dist_button.rl.None,onClick:()=>{d>0&&u(d-1)},style:{display:0===d?"none":""},children:"Previous"})]})]})})})},DrawerSlide=r=>{const{id:e,title:i,children:t}=r;return(0,jsx_runtime.jsx)(DrawerSlideContainer,{id:e,children:t})},rotate=styled_components_browser_esm.i7`
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+`,LoaderWrapper=styled_components_browser_esm.Ay.div`
+  width: ${({size:r})=>`${r}px`};
+  height: ${({size:r})=>`${r}px`};
+  border-radius: 50%;
+  border: ${({borderColor:r})=>`4px solid ${r}`};
+  border-top-color: transparent;
+  animation: ${rotate} 1s linear infinite;
+`,ArcLoader=r=>{const{visible:o=!1,idToFocusOnClose:e,size:s=40,color:a="var(--colors-primary-base)"}=r;return(0,jsx_runtime.jsx)(Overlay,{id:"loader-overlay",visible:o,idToFocusOnClose:e,children:(0,jsx_runtime.jsx)(LoaderWrapper,{size:s,borderColor:a})})}}}]);
+//# sourceMappingURL=487.fa030a92.iframe.bundle.js.map

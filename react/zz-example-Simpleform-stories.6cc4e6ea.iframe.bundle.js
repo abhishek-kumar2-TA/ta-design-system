@@ -8,7 +8,7 @@
   font-family: ${({theme:r})=>r.global.specificFontFamily};
   padding: ${({iconOnly:r=!1})=>r?0:" 0 1.5rem"};
   border: none;
-  border-radius: 5px;
+  border-radius: ${({theme:r})=>r.global.componentRadius};
   transition: all 0.5s;
   cursor: pointer;
   flex-shrink: 0;
@@ -100,4 +100,4 @@
     cursor: inherit;
   }
 `}}]);
-//# sourceMappingURL=zz-example-Simpleform-stories.5a1256bb.iframe.bundle.js.map
+//# sourceMappingURL=zz-example-Simpleform-stories.6cc4e6ea.iframe.bundle.js.map
