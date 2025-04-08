@@ -1,4 +1,4 @@
-"use strict";(self.webpackChunkstorybook_react19=self.webpackChunkstorybook_react19||[]).push([[714],{"./src/formFields/textInput.stories.tsx":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.r(__webpack_exports__),__webpack_require__.d(__webpack_exports__,{CodeAndAccessibility:()=>CodeAndAccessibility,__namedExportsOrder:()=>__namedExportsOrder,default:()=>__WEBPACK_DEFAULT_EXPORT__});var react__WEBPACK_IMPORTED_MODULE_0__=__webpack_require__("../../node_modules/react/index.js"),_tiger_analytics_react_formFields__WEBPACK_IMPORTED_MODULE_1__=__webpack_require__("../../packages/react/dist/formFields/index.js"),_tiger_analytics_react_grid__WEBPACK_IMPORTED_MODULE_2__=__webpack_require__("../../packages/react/dist/grid/index.js"),_utils__WEBPACK_IMPORTED_MODULE_3__=__webpack_require__("./src/utils/index.ts");const __WEBPACK_DEFAULT_EXPORT__={title:"Form/TextInput",component:_tiger_analytics_react_formFields__WEBPACK_IMPORTED_MODULE_1__.ks,parameters:{controls:{expanded:!0}},argTypes:{id:{description:"Mandatory - unique id for testing",table:{defaultValue:{summary:""}},control:"text"},label:{description:"Label for the input",table:{defaultValue:{summary:""}},control:"text"},description:{description:"Additional description for the field",table:{defaultValue:{summary:""}},control:"text"},type:{options:["text","password","email","number"],description:"type of the input",table:{defaultValue:{summary:"text"}},control:{type:"select"}},size:{options:[_tiger_analytics_react_formFields__WEBPACK_IMPORTED_MODULE_1__.S9.Default,_tiger_analytics_react_formFields__WEBPACK_IMPORTED_MODULE_1__.S9.Small],description:"size of the input",table:{defaultValue:{summary:_tiger_analytics_react_formFields__WEBPACK_IMPORTED_MODULE_1__.S9.Default}},control:{type:"select"}},onChangeHandler:{description:"`(value: string) => void` Preferred method to use instead of onChange as it reduces the need to extract string from the event.",table:{category:"Events"},control:!1}}},description=react__WEBPACK_IMPORTED_MODULE_0__.createElement("div",null,react__WEBPACK_IMPORTED_MODULE_0__.createElement("b",null,"Note:")," TextInput is a customizable input field component and"," ",react__WEBPACK_IMPORTED_MODULE_0__.createElement("b",null,"it inherits all the properties of a standard HTML input element"),". You can use attributes like disabled, placeholder, style, etc.,"," ","just as you would with a regular <input> tag in addition to below\n    props."," ","It also has ",react__WEBPACK_IMPORTED_MODULE_0__.createElement("b",null,"onChangeHandler")," method of type ",react__WEBPACK_IMPORTED_MODULE_0__.createElement("b",null,"(value: string) => void")," which reduces the need to extract string from the event."," ",react__WEBPACK_IMPORTED_MODULE_0__.createElement("b",null,"For convenience, use the onChangeHandler")," to directly access the string value.",react__WEBPACK_IMPORTED_MODULE_0__.createElement("br",null),react__WEBPACK_IMPORTED_MODULE_0__.createElement("i",null,"If both onChange and onChangeHandler are provided, onChange takes precedence."),react__WEBPACK_IMPORTED_MODULE_0__.createElement("br",null),react__WEBPACK_IMPORTED_MODULE_0__.createElement("br",null),react__WEBPACK_IMPORTED_MODULE_0__.createElement("p",null,react__WEBPACK_IMPORTED_MODULE_0__.createElement("b",null,"Note :"),"To group multiple input fields, fieldset should be used.",react__WEBPACK_IMPORTED_MODULE_0__.createElement("a",{href:"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset",target:"_blank",rel:"noreferrer"},"Read more about fieldset"))),CodeAndAccessibility=(args=>{const[inputValue,setInputValue]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("");return react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tiger_analytics_react_grid__WEBPACK_IMPORTED_MODULE_2__.E,{showSideMargin:!1},react__WEBPACK_IMPORTED_MODULE_0__.createElement(_utils__WEBPACK_IMPORTED_MODULE_3__.Tx,{importStatement:"import { TextInput } from '@tiger-analytics/react/formFields';"}),react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tiger_analytics_react_grid__WEBPACK_IMPORTED_MODULE_2__.H,null,react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tiger_analytics_react_formFields__WEBPACK_IMPORTED_MODULE_1__.ks,{...args,value:inputValue,onChangeHandler:setInputValue}),react__WEBPACK_IMPORTED_MODULE_0__.createElement("p",null,"Entered text: ",react__WEBPACK_IMPORTED_MODULE_0__.createElement("span",{id:"entered-text"},inputValue))),react__WEBPACK_IMPORTED_MODULE_0__.createElement(_utils__WEBPACK_IMPORTED_MODULE_3__.ur,{description}))}).bind({});CodeAndAccessibility.args={id:"test-input",label:"Label",size:_tiger_analytics_react_formFields__WEBPACK_IMPORTED_MODULE_1__.S9.Default,description:"Some description",type:"text",disabled:!1,placeholder:"Enter text"};const __namedExportsOrder=["CodeAndAccessibility"];CodeAndAccessibility.parameters={...CodeAndAccessibility.parameters,docs:{...CodeAndAccessibility.parameters?.docs,source:{originalSource:"(args: InputProps) => {\n  const [inputValue, setInputValue] = useState('');\n  return <GridContainer showSideMargin={false}>\n      <ImportBlock importStatement={`import { TextInput } from '@tiger-analytics/react/formFields';`} />\n      <GridColumn>\n        <TextInput {...args} value={inputValue} onChangeHandler={setInputValue} />\n        <p>\n          Entered text: <span id=\"entered-text\">{inputValue}</span>\n        </p>\n      </GridColumn>\n      <DescriptionBlock description={description} />\n    </GridContainer>;\n}",...CodeAndAccessibility.parameters?.docs?.source}}}},"./src/utils/index.ts":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{bO:()=>CommentBlock,ur:()=>DescriptionBlock,Tx:()=>ImportBlock});var grid=__webpack_require__("../../packages/react/dist/grid/index.js"),react=__webpack_require__("../../node_modules/react/index.js"),styled_components_browser_esm=__webpack_require__("../../node_modules/styled-components/dist/styled-components.browser.esm.js");const ImportBlockDiv=styled_components_browser_esm.Ay.div`
+"use strict";(self.webpackChunkstorybook_react19=self.webpackChunkstorybook_react19||[]).push([[5],{"./src/utils/index.ts":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{bO:()=>CommentBlock,ur:()=>DescriptionBlock,Tx:()=>ImportBlock});var grid=__webpack_require__("../../packages/react/dist/grid/index.js"),react=__webpack_require__("../../node_modules/react/index.js"),styled_components_browser_esm=__webpack_require__("../../node_modules/styled-components/dist/styled-components.browser.esm.js");const ImportBlockDiv=styled_components_browser_esm.Ay.div`
   padding-bottom: 10px;
   border-bottom: 1px solid var(--colors-primary-base);
   margin-bottom: 10px;
@@ -14,7 +14,7 @@
   color: var(--colors-success-base);
   display: flex;
   flex-wrap: wrap;
-`,CommentBlock=({children})=>react.createElement(CommentContainer,null,children);CommentBlock.__docgenInfo={description:"",methods:[],displayName:"CommentBlock",props:{children:{required:!0,tsType:{name:"ReactNode"},description:""}}}},"../../packages/react/dist/formFields/index.js":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{Sc:()=>Checkbox,S9:()=>FieldSize,fs:()=>TextArea,ks:()=>TextInput,lM:()=>Toggle});var styled_components_browser_esm=__webpack_require__("../../node_modules/styled-components/dist/styled-components.browser.esm.js");const FieldWrapper=styled_components_browser_esm.Ay.div`
+`,CommentBlock=({children})=>react.createElement(CommentContainer,null,children);CommentBlock.__docgenInfo={description:"",methods:[],displayName:"CommentBlock",props:{children:{required:!0,tsType:{name:"ReactNode"},description:""}}}},"../../packages/react/dist/formFields/index.js":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{Sc:()=>Checkbox,S9:()=>FieldSize,l6:()=>Select,fs:()=>TextArea,ks:()=>TextInput,lM:()=>Toggle});var styled_components_browser_esm=__webpack_require__("../../node_modules/styled-components/dist/styled-components.browser.esm.js");const FieldWrapper=styled_components_browser_esm.Ay.div`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -123,7 +123,51 @@
     outline: none;
     border: 2px solid var(--colors-primary-hover);
   }
-`,Toggle=e=>{const{id:i,size:r=FieldSize.Default,label:l,description:d,disabled:t=!1,checked:o=!1,onChange:s,onChangeHandler:c,...n}=e,a=(0,react.useRef)(null);return(0,jsx_runtime.jsxs)(FieldWrapper,{disabled:t,children:[(0,jsx_runtime.jsxs)(StyledToggleContainer,{children:[(0,jsx_runtime.jsx)(StyledToggle,{id:i,size:r,checked:o,onClick:()=>{a&&a.current&&!t&&a.current.click()},children:(0,jsx_runtime.jsx)(StyledToggleInput,{id:`${i}-checkbox`,ref:a,type:"checkbox",disabled:t,checked:o,"aria-describedby":d?`${i}-description`:"",onChange:e=>{s?s(e):c?.(e.target.checked)},...n})}),l&&(0,jsx_runtime.jsx)("label",{htmlFor:`${i}-checkbox`,children:l})]}),d&&(0,jsx_runtime.jsx)(FieldDescription,{id:`${i}-description`,children:d})]})}},"../../packages/react/dist/grid/index.js":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{H:()=>GridColumn,E:()=>GridContainer});var styled_components_browser_esm=__webpack_require__("../../node_modules/styled-components/dist/styled-components.browser.esm.js");const GridColumn=styled_components_browser_esm.Ay.div`
+`,Toggle=e=>{const{id:i,size:r=FieldSize.Default,label:l,description:d,disabled:t=!1,checked:o=!1,onChange:s,onChangeHandler:c,...n}=e,a=(0,react.useRef)(null);return(0,jsx_runtime.jsxs)(FieldWrapper,{disabled:t,children:[(0,jsx_runtime.jsxs)(StyledToggleContainer,{children:[(0,jsx_runtime.jsx)(StyledToggle,{id:i,size:r,checked:o,onClick:()=>{a&&a.current&&!t&&a.current.click()},children:(0,jsx_runtime.jsx)(StyledToggleInput,{id:`${i}-checkbox`,ref:a,type:"checkbox",disabled:t,checked:o,"aria-describedby":d?`${i}-description`:"",onChange:e=>{s?s(e):c?.(e.target.checked)},...n})}),l&&(0,jsx_runtime.jsx)("label",{htmlFor:`${i}-checkbox`,children:l})]}),d&&(0,jsx_runtime.jsx)(FieldDescription,{id:`${i}-description`,children:d})]})};var dist=__webpack_require__("../../node_modules/@radix-ui/react-select/dist/index.mjs");const SelectTrigger=(0,styled_components_browser_esm.Ay)(dist.l9)`
+  width: 100%;
+  font-size: 20px;
+  padding: 0 4px;
+  height: ${({size:e})=>e===FieldSize.Default?"40px":"30px"};
+  border-radius: var(--global-componentRadius);
+  border: 1px solid var(--colors-primary-base);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--colors-background-base);
+`,SelectContent=(0,styled_components_browser_esm.Ay)(dist.UC)`
+  background-color: var(--colors-background-base);
+  border-radius: var(--global-componentRadius);
+  box-shadow: 0 2px 10px var(--colors-primary-hover);
+  overflow: hidden;
+`,SelectItem=(0,styled_components_browser_esm.Ay)(dist.q7)`
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  padding: 8px 10px;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--colors-background-active);
+  }
+  &[data-disabled] {
+    color: var(--colors-textPrimary-hover);
+    pointer-events: none;
+  }
+`,SortIconContainer=styled_components_browser_esm.Ay.span`
+  margin: 4px auto;
+  width: 1rem;
+  height: 1rem;
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
+`,Select=e=>{const{id:r,label:i,description:l,size:o=FieldSize.Default,options:t,disabled:n=!1,onChangeHandler:c,onChange:d,placeholder:s="select",dir:a,...x}=e;return(0,jsx_runtime.jsxs)(FieldWrapper,{disabled:n,children:[i&&(0,jsx_runtime.jsx)("label",{htmlFor:r,children:i}),(0,jsx_runtime.jsxs)(dist.bL,{onValueChange:e=>{d?d({target:{value:e}}):c?.(e)},disabled:n,...x,children:[(0,jsx_runtime.jsxs)(SelectTrigger,{id:r,"aria-describedby":l?`${r}-description`:"",size:o,children:[(0,jsx_runtime.jsx)(dist.WT,{placeholder:s}),(0,jsx_runtime.jsx)(dist.In,{children:(0,jsx_runtime.jsx)(SortIconContainer,{children:(0,jsx_runtime.jsx)(icons.DownArrowIcon,{})})})]}),(0,jsx_runtime.jsx)(dist.ZL,{children:(0,jsx_runtime.jsxs)(SelectContent,{children:[(0,jsx_runtime.jsx)(dist.PP,{children:(0,jsx_runtime.jsx)(SortIconContainer,{children:(0,jsx_runtime.jsx)(icons.UpArrowIcon,{})})}),(0,jsx_runtime.jsx)(dist.LM,{children:t.map((e=>(0,jsx_runtime.jsxs)(SelectItem,{value:e.value,disabled:e.disabled,children:[(0,jsx_runtime.jsx)(dist.p4,{children:e.label}),(0,jsx_runtime.jsx)(dist.VF,{children:(0,jsx_runtime.jsx)(icons.DoneIcon,{width:"16px",height:"16px"})})]},e.value)))}),(0,jsx_runtime.jsx)(dist.wn,{children:(0,jsx_runtime.jsx)(SortIconContainer,{children:(0,jsx_runtime.jsx)(icons.DownArrowIcon,{})})})]})})]}),l&&(0,jsx_runtime.jsx)(FieldDescription,{id:`${r}-description`,children:l})]})}},"../../packages/react/dist/grid/index.js":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{H:()=>GridColumn,E:()=>GridContainer});var styled_components_browser_esm=__webpack_require__("../../node_modules/styled-components/dist/styled-components.browser.esm.js");const GridColumn=styled_components_browser_esm.Ay.div`
   grid-column: ${e=>`span ${e.sm||e.theme.grid.small.columns}`};
   display: ${e=>0===e.sm?"none":"flex"};
   flex-direction: column;
@@ -189,4 +233,4 @@
       `}
   }
 `}}]);
-//# sourceMappingURL=formFields-textInput-stories.2e87584d.iframe.bundle.js.map
+//# sourceMappingURL=5.1e9aaf5b.iframe.bundle.js.map
