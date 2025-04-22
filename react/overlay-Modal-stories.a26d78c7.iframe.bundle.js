@@ -180,7 +180,7 @@
         margin-right: ${({theme:i})=>i.grid.large.margin} !important;
       `}
   }
-`},"../../packages/react/dist/overlay/index.js":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{i4:()=>ArcLoader,_s:()=>Drawer,V:()=>DrawerSlide,aF:()=>Modal,hJ:()=>Overlay,Lf:()=>OverlayContentAlign,dc:()=>useDrawerController});var OverlayContentAlign,t,jsx_runtime=__webpack_require__("../../node_modules/react/jsx-runtime.js"),es2015=__webpack_require__("../../node_modules/react-focus-lock/dist/es2015/index.js");(t=OverlayContentAlign||(OverlayContentAlign={})).TopLeft="top left",t.TopCenter="top center",t.TopRight="top right",t.MiddleLeft="middle left",t.MiddleCenter="middle center",t.MiddleRight="middle right",t.BottomLeft="bottom left",t.BottomCenter="bottom center",t.BottomRight="bottom right";var styled_components_browser_esm=__webpack_require__("../../node_modules/styled-components/dist/styled-components.browser.esm.js");const OverlayContainer=styled_components_browser_esm.Ay.div`
+`},"../../packages/react/dist/overlay/index.js":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{i4:()=>ArcLoader,_s:()=>Drawer,V:()=>DrawerSlide,aF:()=>Modal,hJ:()=>Overlay,Lf:()=>OverlayContentAlign,DD:()=>SideSheet,dc:()=>useDrawerController});var OverlayContentAlign,t,jsx_runtime=__webpack_require__("../../node_modules/react/jsx-runtime.js"),es2015=__webpack_require__("../../node_modules/react-focus-lock/dist/es2015/index.js");(t=OverlayContentAlign||(OverlayContentAlign={})).TopLeft="top left",t.TopCenter="top center",t.TopRight="top right",t.MiddleLeft="middle left",t.MiddleCenter="middle center",t.MiddleRight="middle right",t.BottomLeft="bottom left",t.BottomCenter="bottom center",t.BottomRight="bottom right";var styled_components_browser_esm=__webpack_require__("../../node_modules/styled-components/dist/styled-components.browser.esm.js");const OverlayContainer=styled_components_browser_esm.Ay.div`
   display: ${({visible:e})=>e?"flex":"none"};
   align-items: ${({overlayContentAlign:e})=>"middle"===e.split(" ")[0]?"center":"top"===e.split(" ")[0]?"flex-start":"flex-end"};
 
@@ -283,5 +283,46 @@
   border: ${({borderColor:r})=>`4px solid ${r}`};
   border-top-color: transparent;
   animation: ${rotate} 1s linear infinite;
-`,ArcLoader=r=>{const{visible:o=!1,idToFocusOnClose:e,size:s=40,color:a="var(--colors-primary-base)"}=r;return(0,jsx_runtime.jsx)(Overlay,{id:"loader-overlay",visible:o,idToFocusOnClose:e,children:(0,jsx_runtime.jsx)(LoaderWrapper,{size:s,borderColor:a})})}}}]);
-//# sourceMappingURL=overlay-Modal-stories.52013510.iframe.bundle.js.map
+`,ArcLoader=r=>{const{visible:o=!1,idToFocusOnClose:e,size:s=40,color:a="var(--colors-primary-base)"}=r;return(0,jsx_runtime.jsx)(Overlay,{id:"loader-overlay",visible:o,idToFocusOnClose:e,children:(0,jsx_runtime.jsx)(LoaderWrapper,{size:s,borderColor:a})})},SideSheetContainer=styled_components_browser_esm.Ay.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0.6rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 444px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  animation: ${({visible:e})=>e?"slideIn 0.4s ease-in-out forwards":"none"};
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @media (min-width: 768px) {
+    width: 80%;
+    max-width: 800px;
+  }
+
+  h2 {
+  }
+`,SideSheetHeader=styled_components_browser_esm.Ay.div`
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+`,SideSheetBody=styled_components_browser_esm.Ay.div`
+  flex-grow: 1;
+  overflow-y: auto;
+`,SideSheet=(styled_components_browser_esm.Ay.div`
+  display: flex;
+  flex-direction: column;
+`,e=>{const{id:i,visible:t,title:o,onClose:l,idToFocusOnClose:r,children:n}=e;return(0,jsx_runtime.jsx)(Overlay,{id:`${i}-overlay-container`,visible:t,idToFocusOnClose:r,children:(0,jsx_runtime.jsxs)(SideSheetContainer,{visible:t,role:"dialog","aria-labelledby":`${i}-drawer-title`,children:[(0,jsx_runtime.jsxs)(SideSheetHeader,{children:[(0,jsx_runtime.jsx)(dist_button.$n,{style:{alignSelf:"end"},id:"${`${this.id}-close-button`}",iconOnly:!0,fill:dist_button.rl.None,variant:dist_button.Ak.Primary,"aria-label":"Close",onClick:e=>{e.stopPropagation(),l?.()},children:(0,jsx_runtime.jsx)(icons.CloseIcon,{})}),(0,jsx_runtime.jsx)("h2",{id:`${i}-drawer-title`,children:o})]}),(0,jsx_runtime.jsx)(SideSheetBody,{children:n})]})})})}}]);
+//# sourceMappingURL=overlay-Modal-stories.a26d78c7.iframe.bundle.js.map
